@@ -15,26 +15,26 @@ function setup() {
 	world = engine.world;
 
 	var ground_options={
-		isStatic= true
-	}
+		isStatic: true
+	};
 	  
 	var circle_options={
-		restituition = 0.6,
-		friction = 0.2,
-		frictionAir = 0.4
-	}
+		restitution : 0.6,
+		friction : 0.2,
+		frictionAir : 0.4,
+	};
 	
 	var quadrado_options={
-		restituition = 0.7,
-		friction = 0.3,
-		frictionAir = 0.2
+		restitution : 0.7,
+		friction : 0.3,
+		frictionAir : 0.2,
 	}
 
 	var rect_options={
-		restituition = 0.3,
-		friction = 0.5,
-		frictionAir = 0.1
-	}
+		restitution : 0.3,
+		friction : 0.5,
+		frictionAir : 0.1,
+	};
 	
 	circulo = Bodies.circle(220, 10, 10, circle_options);
 	World.add(world,circulo);
@@ -45,7 +45,7 @@ function setup() {
 	recta = Bodies.rectangle(350, 50, 10, 10, rect_options);
 	World.add(world,recta);
 
-	ground1 = Bodies.rectangle(0, 250, 500, 10, ground_options);
+	ground1 = Bodies.rectangle(500, 480, 1000, 10, ground_options);
 	World.add(world,ground1);
 
 	rectMode(CENTER); 
@@ -60,7 +60,7 @@ function draw() {
 
   
   ellipse(circulo.position.x, circulo.position.y, 10);
-  rect(ground1.position.x, ground1.position.y, 500, 10);
+  rect(ground1.position.x, ground1.position.y, 1000, 10);
   rect(recta.position.x, recta.position.y, 10, 10);
   rect(quadrado.position.x, quadrado.position.y, 10, 10);
  
